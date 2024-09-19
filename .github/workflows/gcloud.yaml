@@ -8,9 +8,11 @@ on:
 
 env:
   PROJECT_ID: 'alpine-myth-429122-g2'
-  REGION: 'us-central1'
+  REGION: 'us'
   REPO: gcr.io
   IMAGE: front-1
+# LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY_NAME/IMAGE_NAME
+# us-central1-docker.pkg.dev/alpine-myth-429122-g2/gcr.io/front-1
 
 jobs:
   deploy:
