@@ -9,7 +9,7 @@ on:
 env:
   PROJECT_ID: 'alpine-myth-429122-g2'
   REGION: 'us-central1'
-  REPO: main
+  REPO: gcr.io
   IMAGE: front-1
 
 jobs:
