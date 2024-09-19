@@ -1,10 +1,10 @@
 name: 'Build and Deploy to Google Cloud Run'
 
 on:
-  workflow_dispatch:
-#  push:
-#    branches:
-#      - main
+#  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   PROJECT_ID: 'alpine-myth-429122-g2'
@@ -36,7 +36,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
 
       - name: Docker auth
-        run: gcloud auth configure-docker $${{ env.REGION }}-docker.pkg.dev --quiet
+        run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
 
       - name: Build and push
         uses: docker/build-push-action@v5
@@ -44,3 +44,5 @@ jobs:
           context: .
           push: true
           tags: ${{ env.IMAGE_TAG }}
+
+
