@@ -18,12 +18,8 @@ jobs:
   deploy:
     runs-on: 'ubuntu-latest'
 
-#    permissions:
-#      contents: 'read'
-#      id-token: 'write'
-
     steps:
-      - name: Checkout our repo for last update
+      - name: Checkout repo for last updates
         uses: 'actions/checkout@v4'
 
       - name: Set variables
@@ -47,5 +43,5 @@ jobs:
           push: true
           tags: ${{ env.IMAGE_TAG }}
 
-      - name: Debug
-        run: env
+#      - name: Debug
+#        run: echo $GITHUB_ENV
