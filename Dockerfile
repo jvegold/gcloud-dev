@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM alpine
-COPY helloworld.sh /
-CMD ["/bin/sh", "/helloworld.sh"]
+#FROM alpine
+#COPY helloworld.sh /
+#CMD ["/bin/sh", "/helloworld.sh"]
+
+FROM nginx:latest
+COPY ./index.html /usr/share/nginx/html/index.html
+
