@@ -13,6 +13,7 @@ env:
   IMAGE: front-1
 # LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY_NAME/IMAGE_NAME
 # us-docker.pkg.dev/alpine-myth-429122-g2/gcr.io/front-1
+#
 
 jobs:
   deploy:
